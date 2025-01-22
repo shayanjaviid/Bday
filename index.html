@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Zina</title>
+    <style>
+        /* General Body Styles */
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #333);
+            color: #ffffff;
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        /* Container Styles */
+        .container {
+            padding: 20px;
+        }
+
+        /* Heading Styles */
+        h1 {
+            font-size: 3rem;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            color: #faff61;
+        }
+
+        h2 {
+            margin: 20px 0;
+            font-size: 2rem;
+            color: #f4ff7a;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .photo-grid img {
+                width: 100px;
+            }
+
+            #cake {
+                width: 150px;
+            }
+
+            #wishes p {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Cake Section */
+        .cake-section {
+            margin: 50px 0;
+        }
+
+        #cake {
+            width: 250px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Photo Gallery */
+        #photo-gallery {
+            margin-top: 40px;
+        }
+
+        .photo-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            opacity: 0;
+            animation: fadeIn 3s ease-in-out forwards;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .photo-grid img {
+            width: 150px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: floatIn 2s infinite alternate;
+        }
+
+        .photo-grid img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        @keyframes floatIn {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Balloon Styles */
+        .balloon {
+            width: 30px;
+            height: 40px;
+            background-color: rgba(255, 192, 203, 0.8);
+            position: absolute;
+            bottom: 0;
+            border-radius: 50%;
+            animation: floatUp 7s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+            }
+        }
+
+        /* Wishes Section */
+        #wishes {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            animation: fadeIn 4s ease-in-out 3s forwards;
+        }
+
+        #wishes p {
+            font-size: 1.8rem;
+            line-height: 2;
+            color: #f8e8e8;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            margin: 0 auto;
+            padding: 0 10px;
+            overflow: hidden;
+            animation: revealText 8s linear forwards;
+        }
+
+        @keyframes revealText {
+            from {
+                max-height: 0;
+            }
+            to {
+                max-height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Beautiful!</h1>
+
+        <div id="photo-gallery">
+            <h2>best Memories</h2>
+            <div class="photo-grid">
+                <img src="Assets/1.jpg" alt="Memory 1">
+                <img src="Assets/2.jpg" alt="Memory 2">
+                <img src="Assets/3.jpg" alt="Memory 3">
+                <img src="Assets/4.jpg" alt="Memory 4">
+                <img src="Assets/5.jpg" alt="Memory 5">
+                <img src="Assets/6.jpg" alt="Memory 6">
+                <img src="Assets/7.jpg" alt="Memory 7">
+                <img src="Assets/8.jpg" alt="Memory 8">
+                <img src="Assets/9.jpg" alt="Memory 9">
+                <img src="Assets/10.jpg" alt="Memory 10">
+            </div>
+        </div>
+
+        <div id="wishes">
+            <h2>Words from the Heart</h2>
+            <p class="typing">Dearest Princess, you bring endless light and joy into my life.
+                 Every moment with you is a treasure, and I am endlessly grateful for your love,
+                  kindness, and presence. Today, we celebrate the wonderful, beautiful person you are.
+                   May this birthday mark the start of a year filled with laughter, success, and love.
+                    You inspire me every day, and I am so proud of all that you are and will become.
+                     Never forget how deeply cherished you are. Happy Birthday, my love! With all my heart, Shayan</p>
+        </div>
+
+        <div class="cake-section">
+            <h2>The Birthday Cake</h2>
+            <img id="cake" src="Assets/Cake.ico" alt="Birthday Cake">
+        </div>
+
+        <audio id="background-music" loop>
+            <source src="Assets/Happy_birthday_to_you_MIDI(chosic.com).mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        const music = document.getElementById('background-music');
+
+        // Play background music and generate balloons on page load
+        window.onload = () => {
+            music.play();
+            const container = document.querySelector('.container');
+
+            // Create multiple colorful balloons
+            for (let i = 0; i < 30; i++) {
+                const balloon = document.createElement('div');
+                balloon.classList.add('balloon');
+                balloon.style.left = Math.random() * 100 + '%';
+                balloon.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 75%)`;
+                balloon.style.animationDelay = Math.random() * 2 + 's';
+                container.appendChild(balloon);
+            }
+        };
+
+        // After text reveal, trigger a celebratory alert
+        const wishesText = document.querySelector('.typing');
+        wishesText.addEventListener('animationend', () => {
+            alert("The words have been spoken from the heart! Let's light the candle on the cake! 🎉");
+        });
+    </script>
+</body>
+</html>
